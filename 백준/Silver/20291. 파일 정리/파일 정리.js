@@ -21,7 +21,7 @@ const readline = require('readline');
         };
     }
     
-    const result = Array.from(map.entries());
+    const result = Array.from(map);
     result.sort((a, b) => a[0].localeCompare(b[0]));
     
     console.log(result.map(file => file.join(' ')).join('\n'));
