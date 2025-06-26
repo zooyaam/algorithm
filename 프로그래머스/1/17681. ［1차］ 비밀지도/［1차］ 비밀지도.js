@@ -1,18 +1,18 @@
 function solution(n, arr1, arr2) {
-    let temp = [];
+    let map1 = arr1.map((num) => num.toString(2).padStart(n, '0'));
+    let map2 = arr2.map((num) => num.toString(2).padStart(n, '0'));
     
-    const toBinary = (arr) => {
-        return arr.map((num) => num.toString(2).padStart(n, '0'));
+    const map = Array.from({ length: n }, () => Array(n).fill(0));
+    
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            if (map1[i][j] === '0' && map2[i][j] === '0') {
+                map[i][j] = ' '
+            } else {
+                map[i][j] = '#';
+            }
+        }
     }
-    arr1 = toBinary(arr1);
-    arr2 = toBinary(arr2);
     
-    for(let i=0; i<n; i++){
-        temp.push((arr1[i]*1 + arr2[i]*1).toString().padStart(n, '0'));
-    }
-    
-    return temp.map(num =>
-        num.split('').map(digit => (digit === '0' ? ' ' : '#')).join('')
-    );
-    
+    return map.map((row) => row.join(''));
 }
