@@ -1,5 +1,5 @@
 function solution(s) {
-    const numList = [
+    const num_words = [
         'zero', 
         'one', 
         'two', 
@@ -12,7 +12,7 @@ function solution(s) {
         'nine'
     ];
     
-    numList.forEach((str, index) => s.includes(str) && (s = s.replaceAll(str, index)));
-
+    num_words.forEach((word, idx) => s.includes(word) && (s = s.replaceAll(word, idx)));
+    
     return Number(s);
 }
