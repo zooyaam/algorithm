@@ -1,10 +1,10 @@
 # [level 0] qr code - 181903 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181903) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181903?language=java) 
 
 ### 성능 요약
 
-메모리: 33.4 MB, 시간: 0.10 ms
+메모리: 71.6 MB, 시간: 0.16 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 02월 02일 17:52:06
+2026년 02월 10일 16:55:10
 
 ### 문제 설명
 
