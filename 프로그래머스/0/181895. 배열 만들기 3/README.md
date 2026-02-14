@@ -1,10 +1,10 @@
 # [level 0] 배열 만들기 3 - 181895 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181895?language=java) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181895) 
 
 ### 성능 요약
 
-메모리: 89.8 MB, 시간: 11.96 ms
+메모리: 105 MB, 시간: 10.05 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2026년 02월 14일 21:48:41
+2026년 02월 14일 22:05:07
 
 ### 문제 설명
 
