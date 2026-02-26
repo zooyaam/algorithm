@@ -7,13 +7,6 @@ class Solution {
         if (arr.length != power) power = power << 1;
         
         // 정답 배열 생성
-        int[] result = new int[power];
-        Arrays.fill(result, 0);
-        
-        for (int i = 0; i < arr.length; i++) {
-            result[i] = arr[i];
-        }
-        
-        return result;
+        return Arrays.copyOf(arr, power);
     }
 }
