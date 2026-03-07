@@ -1,10 +1,10 @@
 # [level 0] 특별한 이차원 배열 2 - 181831 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181831) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181831?language=java) 
 
 ### 성능 요약
 
-메모리: 33.8 MB, 시간: 0.62 ms
+메모리: 76.1 MB, 시간: 0.34 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 01월 30일 15:33:33
+2026년 03월 07일 15:46:21
 
 ### 문제 설명
 
