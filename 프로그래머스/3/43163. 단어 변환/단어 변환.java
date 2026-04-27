@@ -1,41 +1,45 @@
+import java.util.*;
+
 class Solution {
-    static int min = Integer.MAX_VALUE;
-    
-    public int solution(String begin, String target, String[] words) {
-        boolean[] visited = new boolean[words.length];
+    class Node {
+        String word;
+        int cnt;
         
-        dfs(begin, target, words, visited, 0);
-        
-        return min == Integer.MAX_VALUE ? 0 : min;
-        
+        Node(String word, int cnt) {
+            this.word = word;
+            this.cnt = cnt;
+        }
     }
     
-    public static void dfs(String curr, String target, String[] words, boolean[] visited, int cnt) {
-        if (curr.equals(target)) {
-            min = Math.min(min, cnt);
-            return;
-        }
+    public int solution(String begin, String target, String[] words) {
+        Queue<Node> q = new LinkedList<>();
+        boolean[] visited = new boolean[words.length];
         
-        if (cnt >= min) return;
+        q.offer(new Node(begin, 0));
         
-        for (int i = 0; i < words.length; i++) {
-            if (visited[i] == true) continue;
+        while (!q.isEmpty()) {
+            Node curr = q.poll();
+            if (curr.word.equals(target)) return curr.cnt;
             
-            String word = words[i];
-            
-            int t = 0;
-            for (int j = 0; j < word.length(); j++) {
-                char c1 = curr.charAt(j);
-                char c2 = word.charAt(j);
+            for (int i = 0; i < words.length; i++) {
+                if (visited[i]) continue;
                 
-                if (c1 != c2) t++;
-            }
-            
-            if (t == 1) {
-                visited[i] = true;
-                dfs(word, target, words, visited, cnt+1);
-                visited[i] = false;
+                int t = 0;
+                
+                for (int j = 0; j < words[i].length(); j++) {
+                    char c1 = curr.word.charAt(j);
+                    char c2 = words[i].charAt(j);
+                    
+                    if (c1 != c2) t++;
+                }
+                
+                if (t == 1) {
+                    visited[i] = true;
+                    q.offer(new Node(words[i], curr.cnt + 1));
+                }
             }
         }
+        
+        return 0;
     }
 }
