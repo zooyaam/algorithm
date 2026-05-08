@@ -2,9 +2,6 @@ import java.util.*;
 
 class Solution {
     public String solution(String s, String skip, int index) {
-        List<Character> skips = new ArrayList<>();
-        for (char c : skip.toCharArray()) skips.add(c);
-        
         StringBuilder sb = new StringBuilder();
         
         for (char c : s.toCharArray()) {
@@ -18,7 +15,7 @@ class Solution {
                     c += 1;
                 }
                 
-                if (!skips.contains(c)) {
+                if (!skip.contains(String.valueOf(c))) {
                     i++;
                 }
             }
